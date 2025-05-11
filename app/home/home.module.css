@@ -1,0 +1,645 @@
+/* Hero Section */
+.heroSection {
+  background-color: #0a0e17;
+  color: white;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  z-index: 1;
+  position: relative; /* Permite que las tarjetas se posicionen sobre el héroe */
+
+}
+
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .heroContainer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #1f2937;
+}
+
+.badgeDot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: white;
+  margin-right: 0.5rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.accentText {
+  color: #f6ae2d;
+}
+
+.teamWrapper {
+  position: relative;
+}
+
+.teamText {
+  position: relative;
+  z-index: 10;
+}
+
+.teamAvatars {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.avatarGroup {
+  display: flex;
+  margin-right: -1rem;
+}
+
+.avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  border: 2px solid #0a0e17;
+  background-color: #d1d5db;
+  overflow: hidden;
+  margin-right: -1rem;
+}
+
+.avatarImage {
+  object-fit: cover;
+}
+
+.avatarPlus {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  border: 2px solid #0a0e17;
+  background-color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: #d1d5db;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: #f26419;
+  color: white;
+  font-weight: 500;
+}
+
+.buttonIcon {
+  margin-left: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: #f26419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #4b5563;
+  color: white;
+  font-weight: 500;
+}
+
+.secondaryButtonIcon {
+  margin-left: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.statCard {
+  background-color: #1a1f2c;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.statTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.statSubtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.progressBar {
+  margin-top: 0.75rem;
+  height: 0.5rem;
+  width: 100%;
+  background-color: #4b5563;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #f26419;
+  border-radius: 9999px;
+}
+
+.progressText {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.reachHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.checkIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  background-color: #f26419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkMark {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: white;
+}
+
+.reachStats {
+  text-align: right;
+}
+
+.teamTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.teamList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.teamMember {
+  display: flex;
+  align-items: center;
+}
+
+.memberInitial {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: #f26419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.memberInfo {
+  margin-left: 0.75rem;
+}
+
+.memberName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.memberRole {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.chartTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.chartContainer {
+  height: 8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.chartColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chartBar {
+  width: 1.5rem;
+  background-color: #4b5563;
+  border-radius: 0.125rem;
+}
+
+.activeBar {
+  background-color: #3b82f6;
+}
+
+.chartLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.chartValues {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.chartValue {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Client Logos */
+/* .clientLogos {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1f2937;
+  padding-bottom: 1rem;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.clientLogo {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.clientLogo:hover {
+  opacity: 1;
+} */
+
+/* Services Section */
+.servicesSection {
+  padding: 3rem 0;
+  margin-top: -6rem; /* Eleva las tarjetas para que se superpongan al héroe */
+  position: relative;
+  z-index: 2; 
+
+}
+
+.servicesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco con opacidad para el efecto de vidrio */
+  backdrop-filter: blur(8px); /* Aplica el desenfoque para el efecto de vidrio */
+  border-radius: 1rem;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil para el efecto de vidrio */
+
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente al pasar el cursor */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+.serviceContent {
+  padding: 1.5rem;
+  opacity: 0; /* Comienza invisible */
+  transform: translateY(20px); /* Comienza desplazado hacia abajo */
+  animation: fadeInUp 0.6s ease-out forwards; /* Aplica la animación */
+}
+/* Añadir un pequeño retraso para cada tarjeta */
+.serviceCard:nth-child(1) .serviceContent {
+  animation-delay: 0.1s;
+}
+
+.serviceCard:nth-child(2) .serviceContent {
+  animation-delay: 0.2s;
+}
+
+.serviceCard:nth-child(3) .serviceContent {
+  animation-delay: 0.3s;
+}
+
+.serviceIcon {
+    font-size: 2.5rem;
+  color: #f26419; /* Azul para el ícono */
+  margin-bottom: 1rem;
+}
+
+.iconImage {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #2f4858;
+}
+
+.serviceTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.serviceDescription {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  color: #2f4858;
+  font-weight: 500;
+}
+
+.serviceLinkIcon {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.25rem;
+}
+/* Contact Row */
+.contactRow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Una columna por fila en pantallas pequeñas */
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #1a1f2c;
+  border-radius: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .contactRow {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas y grandes */
+  }
+}
+
+.contactColumn {
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f6ae2d;
+  margin-bottom: 0.5rem;
+}
+
+.contactText {
+  font-size: 0.875rem;
+  color: white;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.serviceCard:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Agrega una sombra */
+}
+
+.servicesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #f26419; /* Color principal */
+  margin-bottom: 1rem; /* Espaciado debajo del título */
+}
+
+@media (min-width: 768px) {
+  .servicesTitle {
+    font-size: 2.5rem; /* Tamaño más grande en pantallas medianas y grandes */
+  }
+}
+/* Soluciones Destacadas Section */
+.featuredSolutionsSection {
+  padding: 2rem 0;
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.featuredSolutionsContainer {
+  max-width: 1400px;
+  margin: 0 ;
+  padding: 0 1rem 0 0; /* Quita el padding izquierdo (0) y mantiene el padding derecho (1rem) */
+}
+
+.featuredSolutionsTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 1rem;
+  color: white; /* Color principal */
+  margin-bottom: 1.5rem;
+  background-color: #f26419;
+  border-top-right-radius: 7rem; /* Solo el borde superior derecho redondeado */
+  border-bottom-right-radius: 7rem; /* Solo el borde inferior izquierdo redondeado */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+}
+
+.featuredSolutionsGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .featuredSolutionsGrid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas y grandes */
+  }
+}
+
+.featuredSolutionCard {
+  background-color: #ffffff;
+  border-radius: 0.1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featuredSolutionCard:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Agrega una sombra */
+  border-radius: 1rem; /* Bordes redondeados */
+}
+
+.featuredSolutionTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.featuredSolutionDescription {
+  font-size: 0.875rem;
+  color: #4b5563;
+  text-align: justify;
+}
+
+/* Desarrollo de Liderazgo Section */
+.leadershipBanner {
+  background-color: #e5e7eb; /* Fondo naranja */
+  color: #2f4858; /* Texto blanco */
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.leadershipContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leadershipTitle {
+    font-size: 2rem;
+  font-weight: 450;
+  margin-bottom: 1rem;
+}
+
+.leadershipText {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+
+}
+
+.leadershipButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: white; /* Fondo blanco para el botón */
+  color: #33658a; /* Texto naranja */
+  font-weight: 600;
+  border-radius: 9999px; /* Botón redondeado */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 0.5px solid #33658a; /* Borde naranja */
+}
+
+.leadershipButton:hover {
+  background-color: #33658a; /* Fondo más oscuro al pasar el cursor */
+  color: white; /* Texto blanco al pasar el cursor */
+}

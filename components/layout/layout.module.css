@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoCircle {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  background-color: #f26419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoInner {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid white;
+}
+
+.logoText {
+  margin-left: 0.5rem;
+  color: #f26419;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  position: relative;
+  color: #000; /* Color por defecto */
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navLinkActive {
+  color: #f26419; /* Color del texto del tab activo */
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+}
+
+.phoneIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #2f4858;
+}
+
+.contactText {
+  margin-left: 0.5rem;
+}
+
+.contactLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.contactNumber {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #0a0e17; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 2rem 1rem;
+  text-align: left;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil en la parte superior */
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.logoCircle {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: #f26419; /* Color de acento */
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+}
+
+.logoTextFooter {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.footerSlogan {
+  font-size: 0.875rem;
+  color: #9ca3af; /* Gris sutil */
+  margin-bottom: 1.5rem;
+}
+
+.footerSocials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.socialLink {
+  font-size: 0.75rem;
+  color:white; /* Blue color */
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.socialIcon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  filter: invert(1); /* Hace los íconos blancos para fondos oscuros */
+}
+
+.footerPrivacy {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.privacyLink {
+  color: #3b82f6; /* Azul para el enlace */
+  text-decoration: none;
+}
+
+.privacyLink:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  font-size: 0.875rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdownArrow {
+  font-size: 0.5rem;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #2f4858; /* Color del texto */
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: #f9fafb;
+  color: #f26419; /* Color de hover */
+}
