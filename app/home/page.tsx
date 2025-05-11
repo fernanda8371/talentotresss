@@ -168,7 +168,7 @@ export default function HomePage() {
                 <p className={styles.serviceDescription}>
                 Integramos análisis científico, experiencia práctica y conocimientos de cada sector para contratar profesionales de todos los niveles y funciones para nuestros clientes.                </p>
                 <Link href="#" className={styles.serviceLink}>
-                  Read More
+                  Ver Más
                   <ArrowRight className={styles.serviceLinkIcon} />
                 </Link>
               </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 <p className={styles.serviceDescription}>
                 Traducimos la visión empresarial en iniciativas de recursos humanos que mejoren el rendimiento, rentabilidad, crecimiento y compromiso de los empleados.                </p>
                 <Link href="#" className={styles.serviceLink}>
-                  Read More
+                  Ver Más
                   <ArrowRight className={styles.serviceLinkIcon} />
                 </Link>
               </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
                 <p className={styles.serviceDescription}>
                 Actualización ejecutiva en temas de Capital Humano. Fortaleciendo las habilidades con una perspectiva humanista, desarrollando competencias de estrategia, finanzas, operaciones, talento y mercado. Para ello, se profundizará en temas de actualidad y se utilizará el modelo de casos, experiencias y aplicaciones prácticas.                </p>
                 <Link href="#" className={styles.serviceLink}>
-                  Read More
+                  Ver Más
                   <ArrowRight className={styles.serviceLinkIcon} />
                 </Link>
               </div>

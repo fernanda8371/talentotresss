@@ -1,0 +1,404 @@
+.storeContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    min-height: 100vh;
+    border-radius: 1rem;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: #f6ae2d;
+    border-radius: 2rem;
+    padding: 0.25rem;
+  }
+  
+  .tabButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .activeTab {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .iconButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  
+  .userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Featured Section */
+  .featuredSection {
+    margin-bottom: 4rem;
+  }
+  
+  .featuredHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .featuredContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .featuredContent {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .featuredBook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  
+  .featuredCover {
+    max-height: 400px;
+    width: auto; 
+
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+  }
+  
+  .sideCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+  }
+  
+  .collectionCard {
+    background-color: #e9d9b2;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .collectionContent {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .collectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .collectionCount {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .authorImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .authorImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .audioCard {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audioContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .audioHeader {
+    margin-bottom: 1.5rem;
+  }
+  
+  .audioTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .audioAuthor {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .audioCover {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .audioImage {
+    border-radius: 50%;
+  }
+  
+  .audioProgress {
+    margin-bottom: 1.5rem;
+  }
+  
+  .progressBar {
+    height: 4px;
+    background-color: #eee;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background-color: #e9d9b2;
+    border-radius: 2px;
+  }
+  
+  .progressHandle {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e9d9b2;
+  }
+  
+  .audioControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: auto;
+  }
+  
+  .audioButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .playButton {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Bestsellers Section */
+  .bestsellersSection {
+    margin-bottom: 3rem;
+  }
+  
+  .bestsellersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .bestsellersTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  
+  .bestsellersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .bookCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bookCoverWrapper {
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .bookCoverWrapper:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bookCover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .bookInfo {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .rating {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+  
+  .starFull {
+    color: #e9d9b2;
+  }
+  
+  .starHalf {
+    position: relative;
+    display: inline-block;
+    color: #eee;
+  }
+  
+  .starHalf::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #e9d9b2;
+  }
+  
+  .starEmpty {
+    color: #eee;
+  }
+  
+  .bookTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .bookAuthor {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .buyButton {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .buyButton:hover {
+    background-color: #e9d9b2;
+    border-color: #e9d9b2;
+  }
+  
+  

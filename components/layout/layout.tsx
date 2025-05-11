@@ -54,9 +54,14 @@ export default function Layout({ children }: LayoutProps) {
         Tecnología
       </Link>
 
-      <Link href="/chat-empleo" className={styles.dropdownItem}>
-        Chat Empleo
-      </Link>
+      <a
+      href="https://reclutador-virtual-t3.zapier.app/"
+      className={styles.dropdownItem}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Chat Empleo
+    </a>
     </div>
   </div>
 
