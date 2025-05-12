@@ -132,10 +132,7 @@ export default function Store() {
               <p className={styles.sectionSubtitle}>Explorar los últimos libros y descargables</p>
             </div>
 
-            <div className={styles.searchContainer}>
-              <Search className={styles.searchIcon} />
-              <input type="text" placeholder="Buscar" className={styles.searchInput} />
-            </div>
+            
           </div>
 
           <div className={styles.featuredContent}>

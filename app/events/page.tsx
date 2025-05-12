@@ -5,82 +5,12 @@ import Link from "next/link"
 import { Search, Calendar, MapPin, Clock, Globe, Users, Bookmark, BookmarkCheck, Filter, X, Video, User } from 'lucide-react'
 import styles from "./events.module.css"
 import Layout from "@/components/layout/layout"
+import { eventsData, Event } from "./data"
 
 // Event type definition
 type EventModality = "Online de pago" | "Presencial de pago" | "Presencial gratuito" | "Online gratuito" 
 
-type Event = {
-  id: string
-  title: string
-  date: string
-  time: string
-  image: string
-  description: string
-  location: string
-  modality: EventModality
-  price: number
-  registered: number
-  isPublic: boolean
-}
-
 export default function Events() {
-  // Sample events data
-  const eventsData: Event[] = [
-    {
-      id: "1",
-      title: "Las 5 Llaves de la Magia del Servicio al Cliente en Oaxaca",
-      date: "Junio 18, 2025",
-      time: "9:00 AM - 6:00 PM",
-      image: "/POST-18-JUNIO.png",
-      description: "​¡Prepárate para una experiencia mágica en Oaxaca! Próximo miércoles 18 de junio de 2025 de 9:00 AM a 6:00 PM las 5 Llaves de la Magia del Servicio al Cliente, un evento que transformará la manera en que interactúas con tus clientes. Organizado por Transforma, Talento 3.0 y La Magia del Aprendizaje este evento promete ser una fiesta de aprendizaje donde desvelaremos los secretos para ofrecer un servicio excepcional que dejará a tus clientes encantados.",
-      location: "Zorba el Griego, Oaxaca",
-      modality: "Presencial de pago",
-      price: 25,
-      registered: 200,
-      isPublic: true
-    },
-    {
-      id: "2",
-      title: "Las 5 Llaves de la Magia del Servicio al Cliente en Oaxaca",
-      date: "Junio 19, 2025",
-      time: "9:00 AM - 6:00 PM",
-      image: "/POST-19-JUNIO.png",
-      description: "​Durante este taller, aprenderás a crear un ambiente seguro y acogedor, a mostrar cortesía en cada interacción, y a ser inclusivo con todos tus clientes, sin importar su origen o cultura. Además, te enseñaremos a montar un espectáculo inolvidable que sorprenderá a tus clientes y a ser eficiente en cada paso del camino. No te pierdas esta oportunidad de llevar tu servicio al cliente al siguiente nivel y crear experiencias que tus clientes recordarán para siempre. ¡Nos vemos en Oaxaca!",
-      location: "Zorba el Griego, Oaxaca",
-      modality: "Presencial de pago",
-      price: 150,
-      registered: 132,
-      isPublic: false    },
-    {
-      id: "3",
-      title: "La Magia del Liderazgo y el Trabajo en Equipo en Oaxaca",
-      date: "Junio 20, 2025",
-      time: "9:00 AM - 6:00 PM",
-      image: "/Post-Liderazgo-20-junio.png",
-      description: "​El viernes 20 de junio de 2025, de 9:00 a 18:00 horas nos reuniremos para explorar cómo Disney ha perfeccionado el arte de liderar con inspiración y fomentar la colaboración en un ambiente empresarial vibrante y competitivo.​A través de dinámicas lúdicas y ejemplos prácticos, aprenderás a aplicar estos principios en tu propio entorno laboral. Desde habilidades de liderazgo inspirador hasta estrategias efectivas de servicio al cliente, este curso te equipará con las herramientas necesarias para motivar a tu equipo y alcanzar el éxito. ¡Y no te preocupes, no será solo teoría! Con siete dinámicas interactivas, te sumergirás en un aprendizaje divertido y memorable que te permitirá experimentar y practicar las habilidades de liderazgo al estilo Disney.​Así que, si estás listo para transformar tu enfoque de liderazgo y trabajo en equipo, únete a nosotros en esta experiencia única. ¡Nos vemos en el enlace mágico que te llevará al lugar del evento!",
-      location: "Zorba el Griego, Oaxaca",
-      modality: "Presencial de pago",
-      price: 0,
-      registered: 32,
-      isPublic: true
-    }
-    
-    // {
-    //   id: "6",
-    //   title: "Cybersecurity Masterclass",
-    //   date: "Friday - Dec 08, 2023",
-    //   time: "11:00 AM",
-    //   image: "/placeholder.svg?height=200&width=300",
-    //   description: "A comprehensive overview of modern cybersecurity threats and how to protect your organization.",
-    //   location: "Tech Campus, Austin",
-    //   modality: "hybrid",
-    //   price: 100,
-    //   registered: 75,
-    //   isPublic: false,
-    //   isSaved: true
-    // }
-  ]
-
   // State for events, search, and filters
   const [events, setEvents] = useState<Event[]>(eventsData)
   const [searchTerm, setSearchTerm] = useState("")
@@ -340,24 +270,14 @@ Presencial de pago                </button>
                   
                   <div className={styles.eventFooter}>
                     <div className={styles.registrationInfo}>
-                      <div className={styles.attendeesAvatars}>
-                        {/* Placeholder for attendee avatars */}
-                        <div className={styles.attendeeAvatar}></div>
-                        <div className={styles.attendeeAvatar}></div>
-                        <div className={styles.attendeeAvatar}></div>
-                        <div className={styles.attendeeAvatar}></div>
-                      </div>
-                      <span>{event.registered}+ people registered</span>
+    
                     </div>
                     
                     <div className={styles.eventActions}>
-                      <div className={styles.visibilityBadge}>
-                        <Globe size={14} />
-                        <span>{event.isPublic ? "Public" : "Private"}</span>
-                      </div>
+
                       
                       <Link href={`/events/${event.id}`} className={styles.buyTicketsButton}>
-                        {event.price === 0 ? "Regístrate Gratis" : `Comprar Boletos ${event.price}`}
+                        {event.price === 0 ? "Regístrate Gratis" : `Comprar Boletos `}
                       </Link>
                     </div>
                   </div>

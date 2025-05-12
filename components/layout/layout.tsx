@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Hook para obtener la ruta activa
 import { Phone } from "lucide-react";
 import styles from "./layout.module.css";
+import Image from "next/image";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className={styles.logoContainer}>
           <div className={styles.logo}>
             <div className={styles.logoCircle}>
-              <div className={styles.logoInner}></div>
+              <Image src="/logo.PNG" alt="Logo" width={32} height={32} style={{objectFit: 'contain'}} />
             </div>
             <span className={styles.logoText}>Talento 3.0</span>
           </div>
